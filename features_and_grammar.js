@@ -2,7 +2,6 @@
 
 	Features and grammar
 	
-	
 	Isomorphism
 	
 	Frontend 

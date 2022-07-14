@@ -1,12 +1,15 @@
 <!DOCTYPE html>
 <html>
+
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Basics</title>
 </head>
+
 <body>
 	<h1>JavaScript</h1>
+	
 </body>
 
 <script type="text/javascript">
@@ -20,13 +23,13 @@
 
 	console.log(window)
 	console.log(window.hello)
-
+	
 	//Example 
 
 	console.log('*************** var *****************')
 
 	var music = 'Rock'
-	console.log("Value before block: ",music)
+	console.log("Value before block: ", music)
 
 	{
 		//This is a block
@@ -38,15 +41,15 @@
 		*/
 
 		var music = 'Pop'
-		console.log("Value in block: ",music)
+		console.log("Value in block: ", music)
 	}
 
-	console.log("Value after block: ",music)
+	console.log("Value after block: ", music)
 
 	console.log('*************** let *****************')
 
 	let music_2 = 'Rock'
-	console.log("Value before block: ",music_2)
+	console.log("Value before block: ", music_2)
 
 	{
 		//This is a block
@@ -58,10 +61,144 @@
 		*/
 
 		let music_2 = 'Pop'
-		console.log("Value in block: ",music_2)
+		console.log("Value in block: ", music_2)
 	}
 
-	console.log("Value after block: ",music_2)
+	console.log("Value after block: ", music_2)
+
+	console.log('*************** const *****************')
+
+	let a
+	const PI = 3.1416
+	//PI = 3.15 you can redeclarate value to CONST
+	a = "kenai"
+
+	console.log(PI)
+	console.log(a)
+
+	const objectOne = {
+		name: 'Rodrigo',
+		age: 25
+	}
+
+	const colors = ["white", "black", "blue"]
+
+	console.log(objectOne)
+	console.log(colors)
+
+	objectOne.email = "aldo1rodrigo@gmail.com"
+	colors.push("orange")
+
+	console.log(objectOne)
+	console.log(colors)
+
+	console.log('*************** strings *****************')
+
+	let name = "Aldo Rodrigo"
+	let lastname = "Hernandez Lopez"
+	let greatting = new String("Hello")
+	let lorem = "            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean ullamcorper dui leo, sit amet dignissim eros molestie eget. Maecenas dapibus diam diam, ornare dapibus ipsum bibendum sed. Nullam molestie, turpis at ornare viverra, felis odio varius orci, eget venenatis est dui eget augue. Praesent pretium ante quis augue feugiat vestibulum. Cras suscipit imperdiet cursus. Sed bibendum massa sodales placerat feugiat. Suspendisse porttitor, neque vel posuere molestie, ante dolor posuere felis, ac sagittis massa lorem eu neque. Suspendisse quis diam orci. Mauris enim ex, mattis in sollicitudin ac, scelerisque a augue. Fusce feugiat id leo vel condimentum. Aenean vitae posuere ligula. Nulla sit amet libero vitae nibh fermentum varius at id mauris. "
+
+	console.log(name + " " + lastname)
+	console.log(name.length, lastname.length)
+	console.log(name.toUpperCase(), lastname.toLowerCase())
+	console.log(lorem.includes("amet"))
+	console.log(lorem.includes("aldo"))
+	console.log(lorem)
+	console.log(lorem.trim())
+	console.log(lorem.split(" "))
+	console.log(greatting)
+
+	//Concat strings
+
+	let fullName = name + lastname	
+	console.log(fullName)
+
+
+	//Template String
+
+	let greatting2 = `Hello my name is ${name} ${lastname}`
+	console.log(greatting2)
+
+	let ul = "<ul><li>Spring</li><li>Summer</li><li>Fall</li><li>Winter</li></ul>"
+	console.log(ul)
+
+	let ul2 = `
+		<ul>
+			<li>Spring</li>
+			<li>Summer</li>
+			<li>Fall</li>
+			<li>Winter</li>
+		</ul>`
+
+	console.log(ul2)
+
+	let ul3 = "<ul>"
+		ul3 += "<li>Spring</li>"
+		ul3 += "<li>Summer</li>"
+		ul3 += "<li>Fall</li>"
+		ul3 += "<li>Winter</li>"
+	ul3 += "</ul>"
+
+	console.log(ul3)
+
+	console.log('*************** numbers *****************')
+
+	let a2 = 2
+	let b2 = new Number(4)
+	let c2 = 7.19
+	let d2 = "5.6"
+
+	console.log(a2,b2)
+	console.log(c2.toFixed(1))
+	console.log(c2.toFixed(5))
+	console.log(parseInt(c2))
+	console.log(parseFloat(c2))
+
+	console.log(typeof c2, typeof d2)
+	console.log(a2 + b2)
+	console.log(c2 + d2)
+	console.log(c2 + parseInt(d2))
+	console.log(c2 + parseFloat(d2))
+	console.log(c2 + Number.parseInt(d2))
+	console.log(c2 + Number.parseFloat(d2))
+
+
+	console.log('*************** booleans *****************')
+	
+	let true_ = true
+	let false_ = false
+
+	console.log(true_, false_)
+	console.log(typeof true_, typeof false_)
+
+	let t = Boolean(true)
+	let f = Boolean(false)
+
+	console.log(t, f)
+	console.log(Boolean(0))
+	console.log(Boolean(-1))
+	console.log(Boolean(""))
+	console.log(Boolean(" "))
+	console.log(Boolean(Infinity))
+
+
+	console.log('*************** null, undefined,& NaN *****************')
+
+	let uValue // No set value to init
+
+	console.log(uValue)
+
+	let nValue = null // Set a value "null" by yourself
+
+	console.log(nValue)
+
+	//NaN - Not a number
+
+	let noANumber = "hello" * 3.7
+	console.log(noANumber)
+
 
 </script>
+
 </html>
