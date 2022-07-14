@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Basics</title>
+</head>
+<body>
+	<h1>JavaScript</h1>
+</body>
+
+<script type="text/javascript">
+	var hello = "Hello World!"
+	let hi = "Hello Hello"
+	console.log(hello)
+
+	// before EcmaScript 6 hoisting
+	// var vs let
+	// global vs block
+
+	console.log(window)
+	console.log(window.hello)
+
+	//Example 
+
+	console.log('*************** var *****************')
+
+	var music = 'Rock'
+	console.log("Value before block: ",music)
+
+	{
+		//This is a block
+		// Coment line		
+		/*
+			multiple 
+			comment 
+			line
+		*/
+
+		var music = 'Pop'
+		console.log("Value in block: ",music)
+	}
+
+	console.log("Value after block: ",music)
+
+	console.log('*************** let *****************')
+
+	let music_2 = 'Rock'
+	console.log("Value before block: ",music_2)
+
+	{
+		//This is a block
+		// Coment line		
+		/*
+			multiple 
+			comment 
+			line
+		*/
+
+		let music_2 = 'Pop'
+		console.log("Value in block: ",music_2)
+	}
+
+	console.log("Value after block: ",music_2)
+
+</script>
+</html>
