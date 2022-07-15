@@ -198,6 +198,126 @@
 	let noANumber = "hello" * 3.7
 	console.log(noANumber)
 
+	console.log('*************** functions *****************')
+
+	/*
+		A funtion is a code block, this can be invoke n-times, and run everytime.
+	*/
+
+	//Function declaration
+
+	function  firstFunction(){
+		console.log("One")
+		console.log("Two")
+		console.log("Three")
+	}
+
+	firstFunction() // Invoke function
+
+	function returnValue(){
+		return 26
+	}
+
+	console.log(returnValue())
+
+	function withParams(name = "Aldo rodrigo", age= 25){
+		console.log(`My name is ${name} and I'm ${age} years old`)
+	}
+
+	withParams()
+	withParams("Fernando",26)
+
+	//Function expression / Anonymous
+
+	const functionExpression = function() {
+		console.log("This is a function expression")
+	}
+
+	functionExpression()
+
+	console.log('*************** arrays *****************')
+	
+	const firstArray = []
+
+	console.log(firstArray)
+
+	const arrayA = [1, true, "hello", ['A','B','C']]
+	console.log(arrayA) 
+	console.log(arrayA[0])
+	console.log(arrayA[1])
+	console.log(arrayA[2])
+	console.log(arrayA[3][0])
+	console.log(arrayA[3][1])
+	console.log(arrayA[3][2]) 
+
+	const arrayC = Array.of("X","Y","Z",9,8,7)
+	console.log(arrayC) 
+
+	arrayD = Array(10).fill(true)
+	console.log(arrayD) 
+
+	const arrayE = new Array()
+	const arrayF = new Array(1,2,3,true,false)
+	console.log(arrayE)
+	console.log(arrayF)
+
+	const colors2 = ["Red","Green","Blue"]
+	console.log(colors2)
+	
+	colors2.push("Black")
+	console.log(colors2)
+
+	colors2.pop()
+	console.log(colors2)
+
+	colors2.forEach(function(el, index){
+		console.log(`<li id="${index+1}">${el}</li>`)
+	})
+
+	console.log('*************** objects *****************')
+
+	let stringA = new String("Hello")
+	console.log(stringA)
+
+	const objectA = {}
+	console.log(objectA)
+
+	const objectB = new Object()
+	console.log(objectB)
+
+	const aldo = {
+		name : 'Aldo Rodrigo',
+		age : 25,
+		hobbies: ["Learn tecnologies","travel","Watch series"],
+		data:{
+			email : 'aldo1rodrigo@gmail.com',
+			movil : 5577651197
+		},
+		sayHello:function(){
+			console.log('Hey Hello!')
+		},
+		sayMyName:function(){
+			console.log(`Hello, I'm ${this.name}`)
+		}
+	}
+
+	console.log(aldo)
+
+	console.log(aldo.name)
+	console.log(aldo.age)
+	console.log(aldo.hobbies)
+	console.log(aldo.hobbies[0])
+	console.log(aldo.hobbies[1])
+	console.log(aldo.hobbies[2])
+	console.log(aldo.data)
+	console.log(aldo.data.email)
+	console.log(aldo.data.movil)
+	aldo.sayHello()
+	aldo.sayMyName()
+
+	console.log(Object.keys(aldo))
+	console.log(Object.values(aldo))
+	console.log(aldo.hasOwnProperty("nombre"))
 
 </script>
 
