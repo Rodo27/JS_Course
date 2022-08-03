@@ -344,6 +344,155 @@
 		===	strictly equal to Operator
 	*/
 
+	console.log('*************** Control Structures *****************')
+
+	let age = 17
+
+	if(age > 17){
+		console.log("You are an adult!")
+	}else{
+		console.log("You are not an adult yet!")
+	}
+
+	age = 18
+
+	if(age >= 18){
+		console.log("You are an adult!")
+	}else{
+		console.log("You are not an adult yet!")
+	}
+	
+	age =  15 
+
+	console.log((age > 17) ? "You are an adult!" : "You are not an adult yet!") 
+
+	/*
+		Let me to sleep --- 0 to 5 am
+		Good Morning --- 6 to 11 am
+		Good Afternoon --- 12 to 18 
+		Good Night --- 19 to 23
+
+	*/
+
+	let hour = 19
+
+	if(hour >= 0  && hour <=5)
+		console.log("Let me to sleep")
+	else if (hour >= 6  && hour <= 11)
+		console.log("Good Morning")
+	else if (hour >= 12  && hour <= 18)
+		console.log("Good Afternoon")
+	else 
+		console.log("Good Ninght")
+
+	/*
+		0 Sunday
+		1 Monday 
+		2 Tuesday
+		3 Wednesday
+		4 Thursday
+		5 Friday 
+		6 Saturday 
+
+	*/
+
+	let day = 7
+
+	switch (day) {
+		case 0:
+				console.log("Sunday")
+			break;
+		
+		case 1:
+			console.log("Monday")
+			break;
+
+		case 2:
+				console.log("Tuesday")
+			break;
+
+		case 3:
+				console.log("Wednesday")
+			break;
+
+		case 4:
+				console.log("Thursday")
+			break;
+	
+		case 5:
+				console.log("Friday")
+			break;
+		
+		case 6:
+				console.log("Saturday")
+			break;
+
+		default:
+				console.log("Day no Found!")
+			break;
+		
+			
+	}
+
+	console.log('*************** Loops *****************')
+
+	let cont = 0
+
+	while(cont < 10){
+		console.log(cont)
+		cont ++
+	}
+
+	do{
+		console.log("Do while" + cont)
+		cont++
+	}while(cont < 10)
+
+	let numbers = [10, 20, 30, 40, 50, 60, 70, 80, 90]
+
+	for(let i = 0; i < 10; i++)
+		console.log("for "+i)
+
+	for(let j = 0; j < numbers.length; j++)
+		console.log("for "+numbers[j])
+
+	
+	// for in to iterate all properties in an Object
+
+	const Migajon = {
+		name : "Migajon",
+		lastName: "Hernandez", 
+		age : 1,
+
+	}
+
+	for(const key in Migajon)
+		console.log(Migajon[key])
+
+
+	// for of to iterate all elements in an array
+	
+	for(const item of numbers)
+		console.log(item)
+
+
+	let myString = "dsaklndasnandsmas"
+
+	for(const item of myString)
+		console.log(item)
+
+	// Handle errors 
+
+	try{
+		console.log("Try to eval")
+		variableUndefined
+	}catch(error){
+		console.log("Error "+error)
+	}finally{
+		console.log("Finally instruction")
+	}
+
+
 </script>
 
 </html>
