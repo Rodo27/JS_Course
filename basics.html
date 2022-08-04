@@ -481,17 +481,188 @@
 	for(const item of myString)
 		console.log(item)
 
-	// Handle errors 
+ 
+
+	console.log('*************** Handling errors *****************')
 
 	try{
 		console.log("Try to eval")
 		variableUndefined
 	}catch(error){
-		console.log("Error "+error)
+		console.log("Catch --- Error "+error)
 	}finally{
-		console.log("Finally instruction")
+		console.log("Finally --- Instruction")
 	}
 
+	try{
+
+		let num = 10 + "a"
+
+		if(isNaN(num))
+			throw  new  Error("Value is not a Number!")//handle your own errors
+		
+		console.log(num * num)
+
+	}catch(error){
+		console.log(error)
+	}
+
+
+	
+	console.log('*************** Break and Continue *****************')
+
+	const numbersA = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0]
+
+	for(let i = 0; i< numbersA.length; i++){
+		if(i === 5)
+			break		
+		
+		console.log(numbersA[i])
+
+	}
+
+	for(let i = 0; i< numbersA.length; i++){
+		if(i === 5)
+			continue		
+		
+		console.log(numbersA[i])
+
+	}
+
+
+	console.log('*************** Destructuring *****************')
+	
+	let numbersD = [1, 2, 3, 4, 5]
+	
+	// without destructuring
+
+	let one = numbersD[0]
+	let two = numbersD[1]
+	let three = numbersD[2]
+	let four = numbersD[3]
+	let five = numbersD[4]
+
+	console.log(one, two, three, four, five)
+
+	// with destructuring
+
+	const [one2, two2, three2, four2, five2] = numbersD
+	console.log(one2, two2, three2, four2, five2)
+
+	let rodrigo = {
+		nameR : "Aldo Rodrigo",
+		lastnameR:  "Hernandez Lopez",
+		ageR: 25
+	}
+
+	// Both variable are the same name, this is very important!
+
+	let {nameR, lastnameR, ageR} = rodrigo
+	console.log(nameR, lastnameR, ageR)
+
+
+	let anisName = "Anis Estrella"
+	let anisAge = 1
+
+	const Anis = {
+		anisName,
+		anisAge,
+		miau:function(){
+			console.log("Miauuuuu!")
+		}
+	}
+
+
+	const Bicarbonato = {
+		bicarbonatoName : "Bicarbonato",
+		bicarbonatoAge : .6,
+		miau(){
+			console.log("Miauuuuu bicarbonato!")
+		}
+	}
+
+	console.log(Anis)
+	console.log(Anis.anisName, Anis.anisAge)
+	Anis.miau()
+	Anis.sister = "Migajon"
+	Anis.brother = "Bicarbonato"
+
+	console.log(Anis.sister)
+	console.log(Anis.brother)
+	//	console.log(Anis)
+	Bicarbonato.miau()
+
+
+	
+	console.log('*************** Arrow Functions *****************')
+
+	/*
+		const myFunction = function(){
+			console.log("Hello!")
+		}
+
+		function myFunction(){
+			console.log("Hello!")
+		}
+
+		myFunction = () => console.log("Hello!")
+		
+		myFunction = name => console.log("Hello! " + name)
+
+	*/
+
+	myFunction = name => console.log("Hello! " + name)
+	myFunction("Rodrigo")
+
+	const sumFunction = function(a,b){
+		return a + b
+	} 
+
+	const sumArrow = (a,b) => a + b
+
+
+	console.log(sumFunction(10,15))
+	console.log(sumArrow(18,6))
+
+	const arrayNumbers = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+	
+	/* 
+	arrayNumbers.forEach(function(element, index){
+		console.log(`Element ${element} is at ${index}`)
+	})
+ 	*/
+
+	arrayNumbers.forEach((element,index)=>console.log(`Element ${element} is at ${index}`))
+
+	/*
+	function bicarbonato(){
+		console.log(this)
+	}
+
+	bicarbonato()
+	*/
+
+	bicarbonato = {
+		name : "Bicarbonato",
+		age: .4,
+		miau(){
+			console.log(this.name)
+		}
+		
+	}
+
+	bicarbonato.miau()
+
+	/*
+		POO = {
+			Class,
+			Object:{
+				attributes,
+				methods
+			}
+		}
+	
+	*/
 
 </script>
 
