@@ -664,6 +664,78 @@
 	
 	*/
 
+	console.log('*************** Prototypes *****************')
+
+	/*
+	const animal = {
+		name: "Anis Estrella",
+		sound(){
+			console.log("Miau Miau")
+		}
+	}
+
+	const animal2 = {
+		name: "Migajón",
+		sound(){
+			console.log("Miau Miau")
+		}
+	}
+
+	console.log(animal)
+	console.log(animal2)
+	*/
+
+	//Constructor Function
+
+	/*
+	function Animal(name, age){
+		this.name = name
+		this.age =  age
+
+		this.sound =  function (){
+			console.log("Miau Miau")
+		}
+
+		this.sayName =  function (){
+			console.log(`Miau Miau from ${name}`)
+		}
+	}*/
+
+
+	// Constructor Function
+	function Animal(name, age){
+		this.name = name
+		this.age =  age
+	}
+
+	// Add Methods to prototype constructor function
+	Animal.prototype.sound =  function (){
+		console.log("Miau Miau")
+	}
+
+	Animal.prototype.sayName =  function (){
+		console.log(`Miau Miau from ${name}`)
+	}
+
+	const anisEstrella = new Animal("Anis Estrella", 1)
+	const migajon = new Animal("Migajon", 1)
+	
+	console.log(anisEstrella)
+	console.log(migajon)
+
+	anisEstrella.sound()
+	migajon.sound()
+
+	anisEstrella.sayName()
+	migajon.sayName()
+
+	console.log('*************** Prototypical Inheritance *****************')
+
+	function Cat(name, type, size){
+
+	}
+
+
 </script>
 
 </html>
