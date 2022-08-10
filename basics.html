@@ -756,6 +756,194 @@
 	bicarbonato2.prrr()
 	bicarbonato2.sound()
 	bicarbonato2.sayName()
+
+	console.log('*************** Classes *****************')
+
+	class Animal2{
+
+		// this is an special method
+		constructor(name, age){
+			this.name = name
+			this.age =  age
+		}
+
+		sound(){
+			console.log(`This is a sound by ${this.name}`)
+		}
+
+		sayHello(){
+			console.log(`Hello by ${this.name}`)
+		}
+
+	}
+
+	class Cat2 extends Animal2{
+		
+		constructor(name, age, size){
+			super(name, age)
+			this.size = size
+			this.color = null
+		}
+
+		// override method sayHello
+		sayHello(){
+			console.log(`Hello by ${this.name} Cat`)
+		}
+
+		// add new method
+		toxoMiau(){
+			console.log("Miauuu Miauuu")
+		}
+
+		static infoCat(){
+			console.log("Cat is a pet, is a small animal")
+		}
+
+		// setters and getters
+
+		get getSize(){
+			return this.size
+		}
+
+		get getAge(){
+			return this.age
+		}
+
+		get getColor(){
+			return this.color
+		}
+
+		set setSize(size){
+			this.size = size
+		}
+		
+		set setAge(age){
+			this.age =  age
+		}
+
+		set setColor(color){
+			this.color =  color
+		}
+
+	}
+
+	const pantera = new Animal2("Pantera", 2)
+	pantera.sayHello()
+	pantera.sound()
+	console.log(pantera)
+
+	const toxoplasma = new Cat2("Toxoplasma", 2, "small")
+	toxoplasma.sayHello()
+	toxoplasma.sound()
+	toxoplasma.toxoMiau()
+	console.log(toxoplasma)
+	Cat2.infoCat()
+	console.log('Age : ' +toxoplasma.getAge)
+	console.log('Color : '+toxoplasma.getColor)
+	toxoplasma.setColor = "Brown, white and yellow"
+	console.log('Color : '+toxoplasma.getColor)
+
+	console.log('*************** Object Console *****************')
+
+	console.error("This is an error")
+	console.warn("This is a warn")
+	//console.info("This is an info message"+toxoplasma.getColor)
+	console.log("This is a message log ")
+	console.info(toxoplasma)
+
+	console.log(toxoplasma.getAge,toxoplasma.getColor,toxoplasma.getSize)
+	console.log("I´m Toxoplasma, I´m %d years old, my body color is %s and I´m %s",toxoplasma.getAge, toxoplasma.getColor, toxoplasma.getSize)
+
+	console.clear()
+
+	//console.log(window) // work in chrome in Firefox not work for me
+	//console.log(document)
+	//console.dir(document)
+
+	console.group("Courses JS in Youtube")
+	console.log("Course JS JhonMircha")
+	console.log("Course JS Coderfree")
+	console.log("Course JS Bluuweb")
+	console.groupEnd()
+
+	console.log(console)
+	console.table(Object.entries(console))  
+
+	const myArray = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+	console.table(myArray)
+
+	const otherObject = {
+		nameObject : "myObject",
+		type: "Object"
+	}
+
+	console.table(otherObject)
+
+	console.time("How much time wait my code to run")
+	const arrayLarge = Array(999999999)
+
+	for(let i = 0; i <Array.length;i++){
+		arrayLarge[i] = i + 5
+		
+	}
+		
+
+	console.timeEnd("How much time wait my code to run")
+
+	console.log(arrayLarge)
+
+	console.clear()
+
+	//for(let i = 0; i < 100000; i++ ){
+	for(let i = 0; i < 100; i++ ){
+		console.count("code count")
+		//console.log(i)
+	}
+
+	console.clear()
+
+	// Is a way to make testing easy
+	let x =  4
+	let y = 2
+	pruebaXY = "Expected that x < y"
+
+	console.assert(x < y, {x,y}, pruebaXY)
+
+	console.clear()
+
+	console.log(Date())
+
+	let mydate = new Date()
+
+	console.log(mydate)
+	console.group("Object Date")
+	console.log("Date: "+mydate.getDate())
+	console.log("Month: "+mydate.getMonth())
+	console.log("Year: "+ mydate.getYear())
+	console.log("Year (current): "+mydate.getFullYear())
+	
+	console.log("Hours: "+mydate.getHours())
+	console.log("Minutes: "+mydate.getMinutes())
+	console.log("Seconds: "+mydate.getSeconds())
+	console.groupEnd()
+
+	console.group("Object Date to String")
+	console.log(mydate.toString())
+	console.log(mydate.toDateString())
+	console.log(mydate.toLocaleString())
+	console.log(mydate.toLocaleDateString())
+	console.log(mydate.toLocaleTimeString())
+	console.groupEnd()
+
+	console.log(mydate.getTimezoneOffset())
+	console.log(mydate.getUTCDate())
+	console.log(mydate.getUTCHours())
+
+	console.log(Date.now())
+	let birthday = new Date(1996,8,26)
+	console.log(birthday)
+
+
 </script>
 
 </html>
