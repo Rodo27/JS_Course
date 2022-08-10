@@ -714,7 +714,7 @@
 	}
 
 	Animal.prototype.sayName =  function (){
-		console.log(`Miau Miau from ${name}`)
+		console.log(`Miau Miau from ${this.name}`)
 	}
 
 	const anisEstrella = new Animal("Anis Estrella", 1)
@@ -732,10 +732,30 @@
 	console.log('*************** Prototypical Inheritance *****************')
 
 	function Cat(name, type, size){
-
+		this.super =  Animal
+		this.super(name, age)
+		this.size =  size
 	}
 
+	Cat.prototype = new Animal()
+	Cat.prototype.constructor = Cat
 
+	// Override methods 
+
+	Cat.prototype.sound = function(){
+		console.log("Miau Miau Miau Miau")
+	}
+
+	Cat.prototype.prrr = function(){
+		console.log("Prrr prrr prrr")
+	}
+
+	const bicarbonato2 = new Cat("Bicarbonato", 1, "small")
+	console.log(bicarbonato2)
+	
+	bicarbonato2.prrr()
+	bicarbonato2.sound()
+	bicarbonato2.sayName()
 </script>
 
 </html>
