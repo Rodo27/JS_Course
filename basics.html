@@ -996,6 +996,74 @@
 	console.log([] && "valor de la derecha")
 
 
+	console.clear()
+	console.log('*************** alert, confirm and prompt *****************')
+	console.log(window)
+	// window.alert('This is an alert')
+	// window.confirm('This is a confirm')
+	// window.prompt('This is a prompt')
+
+	//let alertValue = alert('This is an alert')
+	//let confirmValue = confirm('This is a confirm')
+	//let promptValue = prompt('This is a prompt')
+
+	//console.log(alertValue)
+	//console.log(confirmValue)
+	//console.log(promptValue)
+
+	console.clear()
+	console.log('*************** regular expressions *****************')
+
+	let myLorem = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt eligendi lorem debitis a asperiores maxime officiis optio odit voluptatem sequi minus accusamus quas eveniet hic, molestiae, vel iste fugiat laboriosam voluptate!"
+	let expReg = new RegExp('lorem','ig')
+	let expReg2 = /lorem{3}/ig
+
+	//console.log(expReg.test(myLorem))
+	//console.log(expReg.exec(myLorem))
+
+	console.log(expReg2.test(myLorem))
+	console.log(expReg2.exec(myLorem))
+
+	console.clear()
+	console.log('*************** immediate invoke function expression *****************');
+
+	// Is important the last line has ;
+
+	(function(d, w, c) {
+		c.log("Mi first IIFE");
+	})(document, window, console);
+
+	(function() {
+		console.log("Mi second IIFE");
+	})(); 
+
+	/*
+		Some ways to write IIEE
+	*/
+
+	
+	(function(){
+		console.log("Clasic Version")
+	})();
+
+	((function(){
+		console.log("Crockford Version")
+	})());
+
+	+function(){
+		console.log("Unit Version")
+	}();
+
+	!function(){
+		console.log("Facebook Version")
+	}();
+
+
+	console.clear()
+	console.log('*************** modules *****************');
+
+	
+
 </script>
 
 </html>
