@@ -1,9 +1,14 @@
-import {PI, user} from "./conts.js"
-import {arithmetic} from "./arithmetic.js"
+import  sayHello,{PI, user, SayHi} from "./conts.js"
+import {arithmetic as arith} from "./arithmetic.js"
 
 console.log("File modules.js")
 
-console.log(PI, user)
+console.log(PI, user)   
 
-console.log(arithmetic.sumar(15,25))
-console.log(arithmetic.restar(15,25))
+console.log(arith.sumar(15,25))
+console.log(arith.restar(15,25))
+let sayHi = new SayHi()
+sayHi
+//console.log(password)
+//sayHello()
+sayHello()
